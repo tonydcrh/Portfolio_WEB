@@ -157,6 +157,43 @@
             height: 50px;
             margin-bottom: 20px;
         }
+        
+        .veille-content {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        
+        .certification-card {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            height: 100%;
+            border-top: 4px solid var(--primary);
+        }
+        
+        .btn-synthese {
+            background: #28a745;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: background 0.3s;
+            border: none;
+        }
+        
+        .btn-synthese:hover {
+            background: #218838;
+            color: white;
+        }
     </style>
 </head>
 <body>
@@ -177,9 +214,10 @@
                     <li class="nav-item"><a class="nav-link" href="#stage">Stage</a></li>
                     <li class="nav-item"><a class="nav-link" href="#projets">Projets</a></li>
                     <li class="nav-item"><a class="nav-link" href="#competences">Compétences</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
                     <li class="nav-item"><a class="nav-link" href="#lettre-motivation">Lettre de motivation</a></li>
                     <li class="nav-item"><a class="nav-link" href="#recommandation">Recommandation</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#interets">Centres d'intérêt</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#veille">Veille Technologique</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
             </div>
@@ -193,14 +231,18 @@
                 <div class="col-md-12">
                     <h1 class="display-4 fw-bold">Tony De Carvalho</h1>
                     <h2 class="h4 text-primary mb-3">Étudiant en BTS SIO option SISR</h2>
-                    <p>Actuellement en 2ème année de BTS SIO SISR, je recherche une <strong>alternance pour une Licence Professionnelle</strong> à partir de septembre 2026.</p>
+                    <p class="lead">Bonjour je suis Tony De Carvalho j'ai 21 ans je suis en 2 ème de BTS SIO option SISR mes passions dans la vie sont les sports de combat que je pratique à niveau national. Actuellement je suis à la recherche d'une alternance pour l'année 2026 2027 pour ma licence professionnelle spécialité systèmes et réseaux ou cybersécurité.</p>
+                    
                     <div class="mt-4">
                         <div class="d-flex flex-wrap gap-3">
                             <a href="#contact" class="btn btn-primary btn-lg">
                                 <i class="bi bi-envelope"></i> Me contacter
                             </a>
                             <a href="pdf/CV.pdf" target="_blank" class="btn btn-secondary btn-lg">
-                                <i class="bi bi-file-earmark-person"></i> CV
+                                <i class="bi bi-file-earmark-person"></i> Voir mon CV
+                            </a>
+                            <a href="pdf/SynthèseE5.pdf" target="_blank" class="btn-synthese btn-lg">
+                                <i class="bi bi-file-earmark-text"></i> Synthèse E5
                             </a>
                         </div>
                     </div>
@@ -360,12 +402,7 @@
                     
                     <!-- Présentation de l'entreprise -->
                     <div class="entreprise-card">
-                        <div class="text-center mb-4">
-                            <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center mx-auto" style="width: 60px; height: 60px;">
-                                <i class="bi bi-building display-6"></i>
-                            </div>
-                            <h3 class="mt-3 text-primary">Présentation de l'entreprise</h3>
-                        </div>
+                        <h3 class="text-primary mb-4">Présentation de l'entreprise</h3>
                         
                         <p>Le Groupe ADP (Aéroports de Paris) est un acteur international majeur de l'exploitation aéroportuaire. Il gère et développe un réseau de 26 aéroports dans le monde, en s'appuyant sur des partenariats stratégiques et une approche orientée performance, innovation et développement durable.</p>
                         
@@ -563,37 +600,69 @@
         <div class="container">
             <h2 class="section-title text-center">Mes Certifications</h2>
             <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="entreprise-card text-center">
-                        <div class="mb-4">
-                            <i class="bi bi-award display-4 text-primary"></i>
-                            <h3 class="mt-3">Certification ANSSI – SecNumacadémie</h3>
-                            <p class="lead">Formation en Sécurité Numérique</p>
-                        </div>
-                        
-                        <div class="mb-4">
-                            <h5>Modules validés avec succès :</h5>
-                            <div class="row justify-content-center">
-                                <div class="col-md-6">
-                                    <ul class="list-unstyled">
-                                        <li>✓ Panorama de la SSI - 92.0%</li>
-                                        <li>✓ Sécurité de l'authentification - 92.0%</li>
-                                    </ul>
+                <div class="col-lg-10">
+                    <div class="row">
+                        <!-- Certification ANSSI -->
+                        <div class="col-md-6 mb-4">
+                            <div class="certification-card">
+                                <div class="text-center mb-4">
+                                    <i class="bi bi-shield-check display-4 text-primary"></i>
+                                    <h3 class="mt-3">Certification ANSSI – SecNumacadémie</h3>
+                                    <p class="lead">Formation en Sécurité Numérique</p>
                                 </div>
-                                <div class="col-md-6">
-                                    <ul class="list-unstyled">
-                                        <li>✓ Sécurité sur Internet - 82.0%</li>
-                                        <li>✓ Sécurité du poste de travail - 96.0%</li>
-                                    </ul>
+                                
+                                <div class="mb-4">
+                                    <h5>Modules validés avec succès :</h5>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <ul class="list-unstyled">
+                                                <li>✓ Panorama de la SSI - 92.0%</li>
+                                                <li>✓ Sécurité de l'authentification - 92.0%</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <ul class="list-unstyled">
+                                                <li>✓ Sécurité sur Internet - 82.0%</li>
+                                                <li>✓ Sécurité du poste de travail - 96.0%</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="text-center">
+                                    <a href="pdf/ANSSI.pdf" 
+                                       target="_blank" 
+                                       class="btn btn-pdf">
+                                        <i class="bi bi-file-earmark-pdf"></i> Voir l'attestation ANSSI (PDF)
+                                    </a>
                                 </div>
                             </div>
                         </div>
                         
-                        <a href="pdf/ANSSI.pdf" 
-                           target="_blank" 
-                           class="btn btn-pdf btn-lg">
-                            <i class="bi bi-file-earmark-pdf"></i> Voir l'attestation ANSSI (PDF)
-                        </a>
+                        <!-- Certification Pix -->
+                        <div class="col-md-6 mb-4">
+                            <div class="certification-card">
+                                <div class="text-center mb-4">
+                                    <i class="bi bi-award display-4 text-primary"></i>
+                                    <h3 class="mt-3">Certification Pix</h3>
+                                    <p class="lead">Niveau Indépendant 2</p>
+                                </div>
+                                
+                                <div class="mb-4">
+                                    <h5>Validée le 21/01/2026</h5>
+                                    <p>Certification des compétences numériques délivrée par le  Pix.</p>
+                                    
+                                </div>
+                                
+                                <div class="text-center">
+                                    <a href="pdf/Pix.pdf" 
+                                       target="_blank" 
+                                       class="btn btn-pdf">
+                                        <i class="bi bi-file-earmark-pdf"></i> Voir l'attestation Pix (PDF)
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -677,21 +746,19 @@
         </div>
     </section>
 
-    <!-- Section Centres d'intérêt -->
-    <section id="interets" class="bg-light">
+    <!-- Section Veille Technologique -->
+    <section id="veille" class="bg-light">
         <div class="container">
-            <h2 class="section-title text-center">Centres d'intérêt</h2>
+            <h2 class="section-title text-center">Veille Technologique</h2>
             <div class="row justify-content-center">
-                <div class="col-lg-6">
-                    <div class="card border-0 shadow-sm">
-                        <div class="card-body p-5 text-center">
-                            <div class="interet-icon text-primary">
-                                <i class="bi bi-trophy"></i>
-                            </div>
-                            <h4>Sports de Combat</h4>
-                            <p class="text-muted">Pratique à haut niveau - Compétitions nationales</p>
-                            <p class="small text-muted">Développe la discipline, la persévérance, la gestion du stress et le dépassement de soi</p>
-                        </div>
+                <div class="col-lg-10">
+                    <div class="veille-content">
+                        <h3 class="text-primary mb-4">Veille technologique – Passkeys et fin du mot de passe</h3>
+                        <p>Aujourd'hui, le mot de passe est l'une des principales causes de compromission des comptes informatiques, notamment à cause du phishing, des fuites de données et de la réutilisation des identifiants. Pour répondre à ces menaces, les passkeys représentent une évolution majeure de l'authentification.</p>
+                        
+                        <p>Basées sur la cryptographie asymétrique, elles remplacent le mot de passe par une clé privée stockée localement sur l'appareil de l'utilisateur et protégée par une authentification biométrique ou un code. Cette méthode empêche le vol et la réutilisation des identifiants, tout en renforçant la sécurité des accès.</p>
+                        
+                        <p>Déployées progressivement par des acteurs majeurs comme Google, Microsoft et Apple, les passkeys s'inscrivent dans une stratégie de cybersécurité moderne orientée défense, identité numérique et Zero Trust.</p>
                     </div>
                 </div>
             </div>
@@ -730,7 +797,7 @@
                                     <div class="contact-info">
                                         <i class="bi bi-linkedin display-6 text-primary mb-3"></i>
                                         <h4>LinkedIn</h4>
-                                        <a href="https://linkedin.com/in/tony-de-carvalho-25-33b27a" target="_blank">Tony De Carvalho</a>
+                                        <a href="www.linkedin.com/in/tony-de-carvalho-25a33b27a" target="_blank">Tony De Carvalho</a>
                                     </div>
                                 </div>
                             </div>
@@ -799,5 +866,4 @@
         });
     </script>
 </body>
-
 </html>
