@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Tony De Carvalho</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --dark: #1e293b;
+            --light: #f8fafc;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            padding-top: 76px;
+        }
+        
+        .hero-section {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        }
+        
+        .project-card {
+            transition: transform 0.3s, box-shadow 0.3s;
+            height: 100%;
+            border: 1px solid #e5e7eb;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .tech-badge {
+            background: #e0f2fe;
+            color: #0369a1;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            margin: 3px;
+            display: inline-block;
+        }
+        
+        .skill-category {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            height: 100%;
+            border: 2px solid transparent;
+        }
+        
+        .skill-category:hover {
+            border-color: var(--primary);
+        }
+        
+        .langue-badge {
+            background: #e0f2fe;
+            color: #0369a1;
+            padding: 8px 15px;
+            border-radius: 20px;
+            margin: 5px;
+            display: inline-block;
+            border: 2px solid var(--primary);
+        }
+        
+        .contact-info a {
+            color: var(--dark);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .contact-info a:hover {
+            color: var(--primary);
+        }
+        
+        section {
+            padding: 80px 0;
+        }
+        
+        section:nth-child(even) {
+            background-color: #f8fafc;
+        }
+        
+        .section-title {
+            position: relative;
+            padding-bottom: 15px;
+            margin-bottom: 50px;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 60px;
+            height: 4px;
+            background: var(--primary);
+        }
+        
+        .text-center .section-title::after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .experience-card {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-left: 4px solid var(--primary);
+        }
+        
+        .interet-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .entreprise-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            margin-bottom: 30px;
+            border-top: 4px solid var(--primary);
+        }
+        
+        .btn-pdf {
+            background: #dc3545;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: background 0.3s;
+            border: none;
+        }
+        
+        .btn-pdf:hover {
+            background: #c82333;
+            color: white;
+        }
+        
+        .entreprise-logo {
+            height: 50px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">
+                <span class="text-primary">Tony</span> De Carvalho
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#accueil">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#parcours">Parcours</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experiences">Expériences</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#stage">Stage</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projets">Projets</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#competences">Compétences</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#lettre-motivation">Lettre de motivation</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#recommandation">Recommandation</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#interets">Centres d'intérêt</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Section Hero -->
+    <section id="accueil" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-12">
+                    <h1 class="display-4 fw-bold">Tony De Carvalho</h1>
+                    <h2 class="h4 text-primary mb-3">Étudiant en BTS SIO option SISR</h2>
+                    <p>Actuellement en 2ème année de BTS SIO SISR, je recherche une <strong>alternance pour une Licence Professionnelle</strong> à partir de septembre 2026.</p>
+                    <div class="mt-4">
+                        <div class="d-flex flex-wrap gap-3">
+                            <a href="#contact" class="btn btn-primary btn-lg">
+                                <i class="bi bi-envelope"></i> Me contacter
+                            </a>
+                            <a href="c:\Users\tonyd\Downloads\CV.pdf" target="_blank" class="btn btn-secondary btn-lg">
+                                <i class="bi bi-file-earmark-person"></i> CV
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Parcours -->
+    <section id="parcours">
+        <div class="container">
+            <h2 class="section-title">Mon Parcours</h2>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="timeline" style="position: relative; padding-left: 30px;">
+                        <div class="timeline-item" style="position: relative; margin-bottom: 30px; padding-left: 20px;">
+                            <h4>2024 - 2026 (en cours)</h4>
+                            <h5 class="text-primary">BTS SIO - Option SISR</h5>
+                            <p class="mb-1"><strong>Lycée Parc de Vilgénis, Massy</strong></p>
+                            <p class="text-muted">Spécialisation en Solutions d'Infrastructure, Systèmes et Réseaux.</p>
+                        </div>
+                        
+                        <div class="timeline-item" style="position: relative; margin-bottom: 30px; padding-left: 20px;">
+                            <h4>2020 - 2023</h4>
+                            <h5 class="text-primary">Baccalauréat STI2D option SIN</h5>
+                            <p class="mb-1"><strong>Lycée Jean Jaurès, Châtenay-Malabry</strong></p>
+                            <p class="text-muted">Mention Assez Bien - Spécialité Systèmes d'Information et Numérique</p>
+                        </div>
+                        
+                        <div class="timeline-item" style="position: relative; margin-bottom: 30px; padding-left: 20px;">
+                            <h4>Objectif Septembre 2026</h4>
+                            <h5 class="text-primary">Licence Professionnelle en Alternance</h5>
+                            <p class="text-muted">Recherche active d'une alternance dans les domaines de l'administration systèmes et réseaux, de la cybersécurité et du cloud computing.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Expériences Professionnelles -->
+    <section id="experiences" class="bg-light">
+        <div class="container">
+            <h2 class="section-title text-center">Expériences Professionnelles</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    
+                    <!-- Stage Groupe ADP 2 -->
+                    <div class="experience-card">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <span class="badge bg-primary mb-2">Novembre - Décembre 2025</span>
+                                <h5 class="text-primary mt-2">Groupe ADP</h5>
+                                <p class="text-muted small">Aéroports de Paris</p>
+                            </div>
+                            <div class="col-md-9">
+                                <h4>Stage - Équipe Réseau</h4>
+                                <p><strong>Deuxième stage chez ADP :</strong></p>
+                                <ul>
+                                    <li>Renforcement des compétences en gestion réseau</li>
+                                    <li>Gestion de l'inventaire</li>
+                                    <li>Remplissage de documents techniques</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Auchan 2 -->
+                    <div class="experience-card">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <span class="badge bg-primary mb-2">Juillet - Août 2025</span>
+                                <h5 class="text-primary mt-2">Auchan</h5>
+                                <p class="text-muted small">Vélizy 2</p>
+                            </div>
+                            <div class="col-md-9">
+                                <h4>Employé Librairie</h4>
+                                <ul>
+                                    <li>Gestion des stocks et réapprovisionnement</li>
+                                    <li>Conseil clientèle</li>
+                                    <li>Mise en rayon et merchandising</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Stage Groupe ADP 1 -->
+                    <div class="experience-card">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <span class="badge bg-primary mb-2">Juin - Juillet 2025</span>
+                                <h5 class="text-primary mt-2">Groupe ADP</h5>
+                                <p class="text-muted small">Aéroports de Paris</p>
+                            </div>
+                            <div class="col-md-9">
+                                <h4>Stage - Équipe Réseau</h4>
+                                <p><strong>Missions principales :</strong></p>
+                                <ul>
+                                    <li>Configuration de switches EXOS</li>
+                                    <li>Installation et déploiement de matériel informatique</li>
+                                    <li>Gestion et résolution de tickets d'incidents</li>
+                                    <li>Participation à la maintenance du système d'information</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Auchan 1 -->
+                    <div class="experience-card">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <span class="badge bg-primary mb-2">Avril - Juillet 2024</span>
+                                <h5 class="text-primary mt-2">Auchan</h5>
+                                <p class="text-muted small">Vélizy 2</p>
+                            </div>
+                            <div class="col-md-9">
+                                <h4>Employé Librairie</h4>
+                                <ul>
+                                    <li>Gestion de l'espace librairie</li>
+                                    <li>Relation client et conseil</li>
+                                    <li>Organisation des rayons</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Serveur Kick Off -->
+                    <div class="experience-card">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <span class="badge bg-primary mb-2">2021 - 2022</span>
+                                <h5 class="text-primary mt-2">Kick Off</h5>
+                                <p class="text-muted small">Saint-Denis</p>
+                            </div>
+                            <div class="col-md-9">
+                                <h4>Serveur en Restauration</h4>
+                                <ul>
+                                    <li>Service en salle et prise de commandes</li>
+                                    <li>Gestion des réservations</li>
+                                    <li>Travail en équipe en milieu dynamique</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Stage -->
+    <section id="stage">
+        <div class="container">
+            <h2 class="section-title text-center">Stage - Groupe ADP</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    
+                    <!-- Présentation de l'entreprise -->
+                    <div class="entreprise-card">
+                        <div class="text-center mb-4">
+                            <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center mx-auto" style="width: 60px; height: 60px;">
+                                <i class="bi bi-building display-6"></i>
+                            </div>
+                            <h3 class="mt-3 text-primary">Présentation de l'entreprise</h3>
+                        </div>
+                        
+                        <p>Le Groupe ADP (Aéroports de Paris) est un acteur international majeur de l'exploitation aéroportuaire. Il gère et développe un réseau de 26 aéroports dans le monde, en s'appuyant sur des partenariats stratégiques et une approche orientée performance, innovation et développement durable.</p>
+                        
+                        <p>La Direction des Systèmes d'Information (DSI) est chargée de concevoir, piloter et maintenir l'ensemble du système d'information du groupe. Elle assure la disponibilité, la performance et la sécurité des infrastructures informatiques indispensables au bon fonctionnement des activités aéroportuaires. La DSI encadre notamment les pôles réseaux et télécommunications, cybersécurité, infrastructures serveurs, postes de travail et data centers.</p>
+                    </div>
+                    
+                    <!-- Mes stages chez ADP -->
+                    <div class="entreprise-card">
+                        <h4 class="text-primary mb-4">Mes stages au sein du pôle Réseau</h4>
+                        
+                        <div class="mb-4">
+                            <h5>Premier stage - Juin à Juillet 2025</h5>
+                            <p>Mon stage s'est déroulé au sein du pôle Réseau où j'ai participé à des missions de supervision, redondance des équipements réseau, en lien direct avec la formation BTS SIO option SISR.</p>
+                            <p><strong>Missions principales :</strong></p>
+                            <ul>
+                                <li>Configuration de switches EXOS</li>
+                                <li>Installation et déploiement de matériel informatique</li>
+                                <li>Gestion et résolution de tickets d'incidents</li>
+                                <li>Participation à la maintenance du système d'information</li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h5>Deuxième stage - Novembre à Décembre 2025</h5>
+                            <p><strong>Renforcement des compétences :</strong></p>
+                            <ul>
+                                <li>Approfondissement des connaissances en gestion réseau</li>
+                                <li>Gestion de l'inventaire</li>
+                                <li>Remplissage de documents techniques</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="mt-4 p-3 bg-light rounded">
+                            <h6 class="text-primary">Apports de ces stages pour mon parcours :</h6>
+                            <p class="mb-0">Ces expériences chez ADP m'ont permis de mettre en pratique les connaissances acquises en BTS SIO SISR, de découvrir le fonctionnement d'une DSI à grande échelle et de confirmer mon intérêt pour les métiers des infrastructures réseaux et systèmes.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Projets -->
+    <section id="projets" class="bg-light">
+        <div class="container">
+            <h2 class="section-title text-center">Mes Projets</h2>
+            <div class="row g-4">
+                <!-- Projet 1 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="project-card card h-100">
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <span class="tech-badge">Création Infra</span>
+                                <span class="tech-badge">Réseaux</span>
+                                <span class="tech-badge">Virtualisation</span>
+                            </div>
+                            <h4 class="card-title">Création Infrastructure Réseau</h4>
+                            <p class="card-text">Conception et déploiement d'une infrastructure réseau complète avec serveurs, switchs et configuration réseau.</p>
+                            <p class="text-muted small">Projet scolaire BTS SIO</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Projet 2 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="project-card card h-100">
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <span class="tech-badge">HTML/CSS</span>
+                                <span class="tech-badge">JavaScript</span>
+                                <span class="tech-badge">Responsive</span>
+                            </div>
+                            <h4 class="card-title">Site Web Rénovation École</h4>
+                            <p class="card-text">Refonte complète du site web d'un établissement scolaire avec interface moderne et responsive.</p>
+                            <p class="text-muted small">Projet personnel</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Projet 3 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="project-card card h-100">
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <span class="tech-badge">GLPI</span>
+                                <span class="tech-badge">Helpdesk</span>
+                                <span class="tech-badge">Gestion des tickets</span>
+                            </div>
+                            <h4 class="card-title">GLPI - Gestion de Parc Informatique</h4>
+                            <p class="card-text">Installation et configuration de GLPI pour la gestion du parc informatique et le suivi des tickets.</p>
+                            <p class="text-muted small">Projet scolaire BTS SIO</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Compétences -->
+    <section id="competences">
+        <div class="container">
+            <h2 class="section-title text-center">Mes Compétences</h2>
+            <div class="row g-4">
+                <!-- Administration Systèmes -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="skill-category">
+                        <h4 class="text-center mb-4">
+                            <i class="bi bi-pc-display text-primary"></i><br>
+                            Administration Systèmes
+                        </h4>
+                        <div class="text-center">
+                            <span class="tech-badge">Windows Server</span>
+                            <span class="tech-badge">Active Directory</span>
+                            <span class="tech-badge">Linux</span>
+                            <span class="tech-badge">Virtualisation</span>
+                            <span class="tech-badge">Gestion des droits</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Réseaux -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="skill-category">
+                        <h4 class="text-center mb-4">
+                            <i class="bi bi-router text-primary"></i><br>
+                            Réseaux
+                        </h4>
+                        <div class="text-center">
+                            <span class="tech-badge">TCP/IP</span>
+                            <span class="tech-badge">DHCP/DNS</span>
+                            <span class="tech-badge">Routage</span>
+                            <span class="tech-badge">Switch</span>
+                            <span class="tech-badge">GLPI</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Sécurité -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="skill-category">
+                        <h4 class="text-center mb-4">
+                            <i class="bi bi-shield-lock text-primary"></i><br>
+                            Sécurité
+                        </h4>
+                        <div class="text-center">
+                            <span class="tech-badge">Pare-feu</span>
+                            <span class="tech-badge">VPN</span>
+                            <span class="tech-badge">Sécurisation</span>
+                            <span class="tech-badge">Audit</span>
+                            <span class="tech-badge">Cryptographie</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Développement & Bases de données -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="skill-category">
+                        <h4 class="text-center mb-4">
+                            <i class="bi bi-code-square text-primary"></i><br>
+                            Dev & Bases de données
+                        </h4>
+                        <div class="text-center">
+                            <span class="tech-badge">HTML/CSS</span>
+                            <span class="tech-badge">JavaScript</span>
+                            <span class="tech-badge">SQL</span>
+                            <span class="tech-badge">PHP</span>
+                            <span class="tech-badge">Python</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Langues -->
+            <div class="row mt-5">
+                <div class="col-12">
+                    <div class="skill-category">
+                        <h4 class="text-center mb-4">
+                            <i class="bi bi-translate text-primary"></i><br>
+                            Langues
+                        </h4>
+                        <div class="text-center">
+                            <span class="langue-badge">Français - Natif</span>
+                            <span class="langue-badge">Anglais - Niveau C1</span>
+                            <span class="langue-badge">Espagnol - Niveau B2</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Certifications -->
+    <section id="certifications" class="bg-light">
+        <div class="container">
+            <h2 class="section-title text-center">Mes Certifications</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="entreprise-card text-center">
+                        <div class="mb-4">
+                            <i class="bi bi-award display-4 text-primary"></i>
+                            <h3 class="mt-3">Certification ANSSI – SecNumacadémie</h3>
+                            <p class="lead">Formation en Sécurité Numérique</p>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <h5>Modules validés avec succès :</h5>
+                            <div class="row justify-content-center">
+                                <div class="col-md-6">
+                                    <ul class="list-unstyled">
+                                        <li>✓ Panorama de la SSI - 92.0%</li>
+                                        <li>✓ Sécurité de l'authentification - 92.0%</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <ul class="list-unstyled">
+                                        <li>✓ Sécurité sur Internet - 82.0%</li>
+                                        <li>✓ Sécurité du poste de travail - 96.0%</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <a href="c:\Users\tonyd\Downloads\ANSSI.pdf" 
+                           target="_blank" 
+                           class="btn btn-pdf btn-lg">
+                            <i class="bi bi-file-earmark-pdf"></i> Voir l'attestation ANSSI (PDF)
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Lettre de Motivation -->
+    <section id="lettre-motivation" class="bg-light">
+        <div class="container">
+            <h2 class="section-title text-center">Lettre de Motivation</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body p-5">
+                            <div class="mb-4">
+                                <h4 class="text-primary">Tony De Carvalho</h4>
+                                <p class="mb-1">19 Rue du Bois des Vallées</p>
+                                <p class="mb-1">Le Plessis-Robinson (92350)</p>
+                                <p class="mb-1">tony.dcrh@gmail.com | 06 58 00 71 15</p>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <p><strong>Objet :</strong> Candidature pour une alternance en Licence Professionnelle Informatique – spécialité Sécurité et Réseaux</p>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <p>Madame, Monsieur,</p>
+                                
+                                <p>Actuellement étudiant en deuxième année de BTS Services Informatiques aux Organisations (option SISR) au sein du Lycée Parc de Vilgénis, je souhaite poursuivre mes études en licence professionnelle d'informatique, spécialité Systèmes et Réseaux, puis faire un master en cybersécurité, en alternance à partir de septembre 2026.</p>
+                                
+                                <p>J'ai effectué des stages chez ADP (Aéroports de Paris), au sein de l'équipe réseau, où j'ai participé à diverses missions telles que la configuration de switches EXOS, l'installation de matériel informatique, ainsi que la gestion et la résolution de tickets. Cette expérience m'a permis de consolider mes compétences en administration système et réseau, tout en découvrant le fonctionnement d'un système d'information d'envergure. Une lettre de recommandation m'a d'ailleurs été remise à la suite de ce stage, attestant de mon sérieux et de mon implication.</p>
+                                
+                                <p>Je souhaite aujourd'hui rejoindre une entreprise qui me permettra de mettre en pratique les compétences acquises durant mon BTS tout en en développant de nouvelles. Intégrer votre équipe représenterait pour moi une véritable occasion de progresser techniquement et humainement, au contact de professionnels expérimentés. Attentif, impliqué et désireux d'apprendre, je m'adapte rapidement aux environnements de travail et je m'engage pleinement dans les missions qui me sont confiées.</p>
+                                
+                                <p>Je me tiens à votre disposition pour un entretien afin de vous présenter plus en détail mes motivations et mon parcours.</p>
+                            </div>
+                            
+                            <div class="mt-5">
+                                <p>Veuillez agréer, Madame, Monsieur, l'expression de mes salutations distinguées.</p>
+                                <p class="mt-4"><strong>Tony De Carvalho</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Lettre de Recommandation -->
+    <section id="recommandation">
+        <div class="container">
+            <h2 class="section-title text-center">Lettre de Recommandation</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body p-4 text-center">
+                            <h4 class="text-primary mb-4">Lettre de recommandation - Groupe ADP</h4>
+                            <p class="text-muted mb-4">Stage effectué du 02 juin 2025 au 04 juillet 2025</p>
+                            
+                            <div class="mb-4">
+                                <div class="alert alert-info">
+                                    <i class="bi bi-info-circle me-2"></i>
+                                    Lettre signée par Brahim AIT BEN ALI, Head of Network Operation - Groupe ADP
+                                </div>
+                            </div>
+                            
+                            <!-- Bouton pour ouvrir le PDF -->
+                            <div class="mb-4">
+                                <a href="c:\Users\tonyd\Downloads\lettre_recommandation.pdf" target="_blank" class="btn btn-pdf btn-lg">
+                                    <i class="bi bi-file-earmark-pdf"></i> Ouvrir la lettre de recommandation (PDF)
+                                </a>
+                            </div>
+                            
+                            <p class="text-muted mt-3">
+                                Cette lettre atteste de mon sérieux, mon implication et mes compétences techniques démontrées pendant mon stage chez ADP.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Centres d'intérêt -->
+    <section id="interets" class="bg-light">
+        <div class="container">
+            <h2 class="section-title text-center">Centres d'intérêt</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body p-5 text-center">
+                            <div class="interet-icon text-primary">
+                                <i class="bi bi-trophy"></i>
+                            </div>
+                            <h4>Sports de Combat</h4>
+                            <p class="text-muted">Pratique à haut niveau - Compétitions nationales</p>
+                            <p class="small text-muted">Développe la discipline, la persévérance, la gestion du stress et le dépassement de soi</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Contact -->
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title text-center">Contact</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body p-5">
+                            <div class="text-center mb-5">
+                                <h3 class="mb-4">Disponible pour une alternance</h3>
+                                <p class="lead">Je recherche une alternance en Licence Professionnelle pour l'année 2026-2027</p>
+                            </div>
+                            
+                            <div class="row text-center">
+                                <div class="col-md-4 mb-4">
+                                    <div class="contact-info">
+                                        <i class="bi bi-telephone display-6 text-primary mb-3"></i>
+                                        <h4>Téléphone</h4>
+                                        <a href="tel:0658007115">06 58 00 71 15</a>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-4">
+                                    <div class="contact-info">
+                                        <i class="bi bi-envelope display-6 text-primary mb-3"></i>
+                                        <h4>Email</h4>
+                                        <a href="mailto:tony.dcrh@gmail.com">tony.dcrh@gmail.com</a>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-4">
+                                    <div class="contact-info">
+                                        <i class="bi bi-linkedin display-6 text-primary mb-3"></i>
+                                        <h4>LinkedIn</h4>
+                                        <a href="https://linkedin.com/in/tony-de-carvalho-25-33b27a" target="_blank">Tony De Carvalho</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="text-center mt-5">
+                                <h4 class="mb-3">Domaines recherchés</h4>
+                                <div class="d-flex flex-wrap justify-content-center gap-2">
+                                    <span class="tech-badge">Administration Systèmes</span>
+                                    <span class="tech-badge">Réseaux Informatiques</span>
+                                    <span class="tech-badge">Support Technique</span>
+                                    <span class="tech-badge">Cybersécurité</span>
+                                    <span class="tech-badge">Cloud Computing</span>
+                                </div>
+                            </div>
+                            
+                            <div class="text-center mt-5 pt-4 border-top">
+                                <p class="text-muted">
+                                    <small>© 2025 Tony De Carvalho</small>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 70,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Animation au scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(20px)';
+            section.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
