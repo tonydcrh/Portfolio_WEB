@@ -20,8 +20,6 @@
         body {
             font-family: 'Segoe UI', system-ui, sans-serif;
             padding-top: 76px;
-            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
-            min-height: 100vh;
         }
         
         .hero-section {
@@ -29,87 +27,64 @@
             display: flex;
             align-items: center;
             background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .hero-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(circle at 20% 80%, rgba(37, 99, 235, 0.1) 0%, transparent 50%);
         }
         
         .project-card {
             transition: transform 0.3s, box-shadow 0.3s;
             height: 100%;
             border: 1px solid #e5e7eb;
-            border-radius: 12px;
-            overflow: hidden;
         }
         
         .project-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
         }
         
         .tech-badge {
-            background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
+            background: #e0f2fe;
             color: #0369a1;
-            padding: 6px 15px;
-            border-radius: 20px;
+            padding: 5px 12px;
+            border-radius: 15px;
             font-size: 0.85rem;
-            margin: 4px;
+            margin: 3px;
             display: inline-block;
-            font-weight: 500;
-            border: 1px solid #bae6fd;
         }
         
         .skill-category {
             background: white;
-            border-radius: 12px;
-            padding: 30px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
             height: 100%;
             border: 2px solid transparent;
-            transition: all 0.3s ease;
         }
         
         .skill-category:hover {
             border-color: var(--primary);
-            transform: translateY(-5px);
         }
         
         .langue-badge {
-            background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
+            background: #e0f2fe;
             color: #0369a1;
-            padding: 10px 20px;
-            border-radius: 25px;
-            margin: 6px;
+            padding: 8px 15px;
+            border-radius: 20px;
+            margin: 5px;
             display: inline-block;
             border: 2px solid var(--primary);
-            font-weight: 500;
         }
         
         .contact-info a {
             color: var(--dark);
             text-decoration: none;
             transition: color 0.3s;
-            padding: 5px;
-            display: inline-block;
         }
         
         .contact-info a:hover {
             color: var(--primary);
-            transform: translateY(-2px);
         }
         
         section {
-            padding: 100px 0;
-            position: relative;
+            padding: 80px 0;
         }
         
         section:nth-child(even) {
@@ -118,10 +93,8 @@
         
         .section-title {
             position: relative;
-            padding-bottom: 20px;
-            margin-bottom: 60px;
-            font-weight: 700;
-            color: var(--dark);
+            padding-bottom: 15px;
+            margin-bottom: 50px;
         }
         
         .section-title::after {
@@ -129,10 +102,9 @@
             position: absolute;
             left: 0;
             bottom: 0;
-            width: 80px;
+            width: 60px;
             height: 4px;
-            background: linear-gradient(90deg, var(--primary), #60a5fa);
-            border-radius: 2px;
+            background: var(--primary);
         }
         
         .text-center .section-title::after {
@@ -142,16 +114,11 @@
         
         .experience-card {
             background: white;
-            border-radius: 12px;
-            padding: 30px;
-            margin-bottom: 25px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.06);
-            border-left: 5px solid var(--primary);
-            transition: transform 0.3s ease;
-        }
-        
-        .experience-card:hover {
-            transform: translateX(5px);
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-left: 4px solid var(--primary);
         }
         
         .interet-icon {
@@ -161,32 +128,29 @@
         
         .entreprise-card {
             background: white;
-            border-radius: 12px;
-            padding: 35px;
-            box-shadow: 0 12px 30px rgba(0,0,0,0.08);
-            margin-bottom: 35px;
-            border-top: 5px solid var(--primary);
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            margin-bottom: 30px;
+            border-top: 4px solid var(--primary);
         }
         
         .btn-pdf {
-            background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+            background: #dc3545;
             color: white;
-            padding: 12px 25px;
-            border-radius: 8px;
+            padding: 10px 20px;
+            border-radius: 5px;
             text-decoration: none;
             display: inline-flex;
             align-items: center;
-            gap: 10px;
-            transition: all 0.3s;
+            gap: 8px;
+            transition: background 0.3s;
             border: none;
-            font-weight: 500;
         }
         
         .btn-pdf:hover {
             background: #c82333;
             color: white;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(220, 53, 69, 0.3);
         }
         
         .entreprise-logo {
@@ -196,139 +160,39 @@
         
         .veille-content {
             background: white;
-            border-radius: 12px;
-            padding: 35px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-            margin-bottom: 35px;
-            line-height: 1.7;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            line-height: 1.6;
         }
         
         .certification-card {
             background: white;
-            border-radius: 12px;
-            padding: 30px;
-            margin-bottom: 25px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
             height: 100%;
-            border-top: 5px solid var(--primary);
+            border-top: 4px solid var(--primary);
         }
         
         .btn-synthese {
-            background: linear-gradient(135deg, #28a745 0%, #218838 100%);
+            background: #28a745;
             color: white;
-            padding: 12px 25px;
-            border-radius: 8px;
+            padding: 10px 20px;
+            border-radius: 5px;
             text-decoration: none;
             display: inline-flex;
             align-items: center;
-            gap: 10px;
-            transition: all 0.3s;
+            gap: 8px;
+            transition: background 0.3s;
             border: none;
-            font-weight: 500;
         }
         
         .btn-synthese:hover {
             background: #218838;
             color: white;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(40, 167, 69, 0.3);
-        }
-        
-        /* Navigation améliorée */
-        .navbar {
-            backdrop-filter: blur(10px);
-            background: rgba(255, 255, 255, 0.95) !important;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-        }
-        
-        .nav-link {
-            position: relative;
-            padding: 10px 15px !important;
-            border-radius: 8px;
-            transition: all 0.3s;
-            font-weight: 500;
-        }
-        
-        .nav-link:hover {
-            background: rgba(37, 99, 235, 0.1);
-            color: var(--primary) !important;
-        }
-        
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 15px;
-            right: 15px;
-            height: 2px;
-            background: var(--primary);
-            transform: scaleX(0);
-            transition: transform 0.3s;
-        }
-        
-        .nav-link:hover::after {
-            transform: scaleX(1);
-        }
-        
-        /* Timeline améliorée */
-        .timeline {
-            position: relative;
-            padding-left: 30px;
-        }
-        
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            background: linear-gradient(to bottom, var(--primary), #93c5fd);
-        }
-        
-        .timeline-item {
-            position: relative;
-            margin-bottom: 40px;
-            padding-left: 25px;
-        }
-        
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -7px;
-            top: 5px;
-            width: 16px;
-            height: 16px;
-            background: var(--primary);
-            border-radius: 50%;
-            border: 3px solid white;
-            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
-        }
-        
-        /* Bouton primaire amélioré */
-        .btn-primary {
-            background: linear-gradient(135deg, var(--primary) 0%, #1d4ed8 100%);
-            border: none;
-            padding: 12px 28px;
-            font-weight: 500;
-            transition: all 0.3s;
-        }
-        
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(37, 99, 235, 0.3);
-        }
-        
-        /* Animation au scroll */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.6s ease-out;
-        }
-        
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
         }
     </style>
 </head>
@@ -365,9 +229,9 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-12">
-                    <h1 class="display-4 fw-bold mb-4">Tony De Carvalho</h1>
-                    <h2 class="h4 text-primary mb-4">Étudiant en BTS SIO option SISR</h2>
-                    <p class="lead mb-5">Bonjour je suis Tony De Carvalho j'ai 21 ans je suis en 2 ème de BTS SIO option SISR mes passions dans la vie sont les sports de combat que je pratique à niveau national. Actuellement je suis à la recherche d'une alternance pour l'année 2026 2027 pour ma licence professionnelle spécialité systèmes et réseaux ou cybersécurité.</p>
+                    <h1 class="display-4 fw-bold">Tony De Carvalho</h1>
+                    <h2 class="h4 text-primary mb-3">Étudiant en BTS SIO option SISR</h2>
+                    <p class="lead">Bonjour je suis Tony De Carvalho j'ai 21 ans je suis en 2 ème de BTS SIO option SISR mes passions dans la vie sont les sports de combat que je pratique à niveau national. Actuellement je suis à la recherche d'une alternance pour l'année 2026 2027 pour ma licence professionnelle spécialité systèmes et réseaux ou cybersécurité.</p>
                     
                     <div class="mt-4">
                         <div class="d-flex flex-wrap gap-3">
@@ -393,25 +257,25 @@
             <h2 class="section-title">Mon Parcours</h2>
             <div class="row">
                 <div class="col-lg-8 mx-auto">
-                    <div class="timeline">
-                        <div class="timeline-item fade-in">
+                    <div class="timeline" style="position: relative; padding-left: 30px;">
+                        <div class="timeline-item" style="position: relative; margin-bottom: 30px; padding-left: 20px;">
                             <h4>2024 - 2026 (en cours)</h4>
                             <h5 class="text-primary">BTS SIO - Option SISR</h5>
                             <p class="mb-1"><strong>Lycée Parc de Vilgénis, Massy</strong></p>
                             <p class="text-muted">Spécialisation en Solutions d'Infrastructure, Systèmes et Réseaux.</p>
                         </div>
                         
-                        <div class="timeline-item fade-in">
+                        <div class="timeline-item" style="position: relative; margin-bottom: 30px; padding-left: 20px;">
                             <h4>2020 - 2023</h4>
                             <h5 class="text-primary">Baccalauréat STI2D option SIN</h5>
                             <p class="mb-1"><strong>Lycée Jean Jaurès, Châtenay-Malabry</strong></p>
                             <p class="text-muted">Mention Assez Bien - Spécialité Systèmes d'Information et Numérique</p>
                         </div>
                         
-                        <div class="timeline-item fade-in">
+                        <div class="timeline-item" style="position: relative; margin-bottom: 30px; padding-left: 20px;">
                             <h4>Objectif Septembre 2026</h4>
                             <h5 class="text-primary">Licence Professionnelle en Alternance</h5>
-                            <p class="text-muted">Recherche active d'une alternance dans les domaines de l'administration systèmes et réseaux et de la cybersécurité.</p>
+                            <p class="text-muted">Recherche active d'une alternance dans les domaines de l'administration systèmes et réseaux, de la cybersécurité et du cloud computing.</p>
                         </div>
                     </div>
                 </div>
@@ -427,10 +291,10 @@
                 <div class="col-lg-10">
                     
                     <!-- Stage Groupe ADP 2 -->
-                    <div class="experience-card fade-in">
+                    <div class="experience-card">
                         <div class="row">
                             <div class="col-md-3">
-                                <span class="badge bg-primary mb-3">Novembre - Décembre 2025</span>
+                                <span class="badge bg-primary mb-2">Novembre - Décembre 2025</span>
                                 <h5 class="text-primary mt-2">Groupe ADP</h5>
                                 <p class="text-muted small">Aéroports de Paris</p>
                             </div>
@@ -447,10 +311,10 @@
                     </div>
                     
                     <!-- Auchan 2 -->
-                    <div class="experience-card fade-in">
+                    <div class="experience-card">
                         <div class="row">
                             <div class="col-md-3">
-                                <span class="badge bg-primary mb-3">Juillet - Août 2025</span>
+                                <span class="badge bg-primary mb-2">Juillet - Août 2025</span>
                                 <h5 class="text-primary mt-2">Auchan</h5>
                                 <p class="text-muted small">Vélizy 2</p>
                             </div>
@@ -466,10 +330,10 @@
                     </div>
                     
                     <!-- Stage Groupe ADP 1 -->
-                    <div class="experience-card fade-in">
+                    <div class="experience-card">
                         <div class="row">
                             <div class="col-md-3">
-                                <span class="badge bg-primary mb-3">Juin - Juillet 2025</span>
+                                <span class="badge bg-primary mb-2">Juin - Juillet 2025</span>
                                 <h5 class="text-primary mt-2">Groupe ADP</h5>
                                 <p class="text-muted small">Aéroports de Paris</p>
                             </div>
@@ -487,10 +351,10 @@
                     </div>
                     
                     <!-- Auchan 1 -->
-                    <div class="experience-card fade-in">
+                    <div class="experience-card">
                         <div class="row">
                             <div class="col-md-3">
-                                <span class="badge bg-primary mb-3">Avril - Juillet 2024</span>
+                                <span class="badge bg-primary mb-2">Avril - Juillet 2024</span>
                                 <h5 class="text-primary mt-2">Auchan</h5>
                                 <p class="text-muted small">Vélizy 2</p>
                             </div>
@@ -506,10 +370,10 @@
                     </div>
                     
                     <!-- Serveur Kick Off -->
-                    <div class="experience-card fade-in">
+                    <div class="experience-card">
                         <div class="row">
                             <div class="col-md-3">
-                                <span class="badge bg-primary mb-3">2021 - 2022</span>
+                                <span class="badge bg-primary mb-2">2021 - 2022</span>
                                 <h5 class="text-primary mt-2">Kick Off</h5>
                                 <p class="text-muted small">Saint-Denis</p>
                             </div>
@@ -537,7 +401,7 @@
                 <div class="col-lg-10">
                     
                     <!-- Présentation de l'entreprise -->
-                    <div class="entreprise-card fade-in">
+                    <div class="entreprise-card">
                         <h3 class="text-primary mb-4">Présentation de l'entreprise</h3>
                         
                         <p>Le Groupe ADP (Aéroports de Paris) est un acteur international majeur de l'exploitation aéroportuaire. Il gère et développe un réseau de 26 aéroports dans le monde, en s'appuyant sur des partenariats stratégiques et une approche orientée performance, innovation et développement durable.</p>
@@ -546,7 +410,7 @@
                     </div>
                     
                     <!-- Mes stages chez ADP -->
-                    <div class="entreprise-card fade-in">
+                    <div class="entreprise-card">
                         <h4 class="text-primary mb-4">Mes stages au sein du pôle Réseau</h4>
                         
                         <div class="mb-4">
@@ -571,7 +435,7 @@
                             </ul>
                         </div>
                         
-                        <div class="mt-4 p-4 bg-light rounded">
+                        <div class="mt-4 p-3 bg-light rounded">
                             <h6 class="text-primary">Apports de ces stages pour mon parcours :</h6>
                             <p class="mb-0">Ces expériences chez ADP m'ont permis de mettre en pratique les connaissances acquises en BTS SIO SISR, de découvrir le fonctionnement d'une DSI à grande échelle et de confirmer mon intérêt pour les métiers des infrastructures réseaux et systèmes.</p>
                         </div>
@@ -589,7 +453,7 @@
             <div class="row g-4">
                 <!-- Projet 1 -->
                 <div class="col-md-6 col-lg-4">
-                    <div class="project-card card h-100 fade-in">
+                    <div class="project-card card h-100">
                         <div class="card-body">
                             <div class="mb-3">
                                 <span class="tech-badge">Création Infra</span>
@@ -605,7 +469,7 @@
                 
                 <!-- Projet 2 -->
                 <div class="col-md-6 col-lg-4">
-                    <div class="project-card card h-100 fade-in">
+                    <div class="project-card card h-100">
                         <div class="card-body">
                             <div class="mb-3">
                                 <span class="tech-badge">HTML/CSS</span>
@@ -619,15 +483,14 @@
                     </div>
                 </div>
                 
-                <!-- Projet 3 - REMPLACÉ -->
+                <!-- Projet 3 -->
                 <div class="col-md-6 col-lg-4">
-                    <div class="project-card card h-100 fade-in">
+                    <div class="project-card card h-100">
                         <div class="card-body">
                             <div class="mb-3">
                                 <span class="tech-badge">EXOS</span>
                                 <span class="tech-badge">Switches</span>
                                 <span class="tech-badge">Configuration</span>
-                                <span class="tech-badge">Réseau</span>
                             </div>
                             <h4 class="card-title">Stack Switches EXOS - Douane</h4>
                             <p class="card-text">Configuration de switches EXOS en stack pour la douane avec mise en place des règles de sécurité et segmentation réseau.</p>
@@ -646,7 +509,7 @@
             <div class="row g-4">
                 <!-- Administration Systèmes -->
                 <div class="col-md-6 col-lg-3">
-                    <div class="skill-category fade-in">
+                    <div class="skill-category">
                         <h4 class="text-center mb-4">
                             <i class="bi bi-pc-display text-primary"></i><br>
                             Administration Systèmes
@@ -663,7 +526,7 @@
                 
                 <!-- Réseaux -->
                 <div class="col-md-6 col-lg-3">
-                    <div class="skill-category fade-in">
+                    <div class="skill-category">
                         <h4 class="text-center mb-4">
                             <i class="bi bi-router text-primary"></i><br>
                             Réseaux
@@ -680,7 +543,7 @@
                 
                 <!-- Sécurité -->
                 <div class="col-md-6 col-lg-3">
-                    <div class="skill-category fade-in">
+                    <div class="skill-category">
                         <h4 class="text-center mb-4">
                             <i class="bi bi-shield-lock text-primary"></i><br>
                             Sécurité
@@ -696,7 +559,7 @@
                 
                 <!-- Développement & Bases de données -->
                 <div class="col-md-6 col-lg-3">
-                    <div class="skill-category fade-in">
+                    <div class="skill-category">
                         <h4 class="text-center mb-4">
                             <i class="bi bi-code-square text-primary"></i><br>
                             Dev & Bases de données
@@ -715,7 +578,7 @@
             <!-- Langues -->
             <div class="row mt-5">
                 <div class="col-12">
-                    <div class="skill-category fade-in">
+                    <div class="skill-category">
                         <h4 class="text-center mb-4">
                             <i class="bi bi-translate text-primary"></i><br>
                             Langues
@@ -740,7 +603,7 @@
                     <div class="row">
                         <!-- Certification ANSSI -->
                         <div class="col-md-6 mb-4">
-                            <div class="certification-card fade-in">
+                            <div class="certification-card">
                                 <div class="text-center mb-4">
                                     <i class="bi bi-shield-check display-4 text-primary"></i>
                                     <h3 class="mt-3">Certification ANSSI – SecNumacadémie</h3>
@@ -777,7 +640,7 @@
                         
                         <!-- Certification Pix -->
                         <div class="col-md-6 mb-4">
-                            <div class="certification-card fade-in">
+                            <div class="certification-card">
                                 <div class="text-center mb-4">
                                     <i class="bi bi-award display-4 text-primary"></i>
                                     <h3 class="mt-3">Certification Pix</h3>
@@ -811,7 +674,7 @@
             <h2 class="section-title text-center">Lettre de Motivation</h2>
             <div class="row justify-content-center">
                 <div class="col-lg-10">
-                    <div class="card border-0 shadow-sm fade-in">
+                    <div class="card border-0 shadow-sm">
                         <div class="card-body p-5">
                             <div class="mb-4">
                                 <h4 class="text-primary">Tony De Carvalho</h4>
@@ -853,7 +716,7 @@
             <h2 class="section-title text-center">Lettre de Recommandation</h2>
             <div class="row justify-content-center">
                 <div class="col-lg-10">
-                    <div class="card border-0 shadow-sm fade-in">
+                    <div class="card border-0 shadow-sm">
                         <div class="card-body p-4 text-center">
                             <h4 class="text-primary mb-4">Lettre de recommandation - Groupe ADP</h4>
                             <p class="text-muted mb-4">Stage effectué du 02 juin 2025 au 04 juillet 2025</p>
@@ -888,7 +751,7 @@
             <h2 class="section-title text-center">Veille Technologique</h2>
             <div class="row justify-content-center">
                 <div class="col-lg-10">
-                    <div class="veille-content fade-in">
+                    <div class="veille-content">
                         <h3 class="text-primary mb-4">Veille technologique – Passkeys et fin du mot de passe</h3>
                         <p>Aujourd'hui, le mot de passe est l'une des principales causes de compromission des comptes informatiques, notamment à cause du phishing, des fuites de données et de la réutilisation des identifiants. Pour répondre à ces menaces, les passkeys représentent une évolution majeure de l'authentification.</p>
                         
@@ -907,7 +770,7 @@
             <h2 class="section-title text-center">Contact</h2>
             <div class="row justify-content-center">
                 <div class="col-lg-8">
-                    <div class="card border-0 shadow-sm fade-in">
+                    <div class="card border-0 shadow-sm">
                         <div class="card-body p-5">
                             <div class="text-center mb-5">
                                 <h3 class="mb-4">Disponible pour une alternance</h3>
@@ -993,49 +856,11 @@
             });
         }, observerOptions);
         
-        // Animation pour les éléments fade-in
-        const fadeObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, { threshold: 0.1 });
-        
-        // Appliquer les animations
         document.querySelectorAll('section').forEach(section => {
             section.style.opacity = '0';
             section.style.transform = 'translateY(20px)';
             section.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
             observer.observe(section);
-        });
-        
-        // Observer les éléments avec classe fade-in
-        document.querySelectorAll('.fade-in').forEach(element => {
-            fadeObserver.observe(element);
-        });
-        
-        // Navigation active
-        const sections = document.querySelectorAll('section');
-        const navLinks = document.querySelectorAll('.nav-link');
-        
-        window.addEventListener('scroll', () => {
-            let current = '';
-            
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop - 100;
-                const sectionHeight = section.clientHeight;
-                if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
-                    current = section.getAttribute('id');
-                }
-            });
-            
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href') === `#${current}`) {
-                    link.classList.add('active');
-                }
-            });
         });
     </script>
 </body>
